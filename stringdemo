@@ -1,0 +1,43 @@
+package mystrings;
+import java.util.Vector;
+import static java.lang.System.out;
+public class Stringdemo {
+      
+	public static void main(String[] args) {
+		Vector v;
+		//store string constant in String class variable
+		String s="Hello";
+		out.println("Object id:"+s.hashCode());
+      //store string constant in String class variable
+		String s1="Hello";
+		out.println("Object id:"+s1.hashCode());
+		out.println(s1);
+		
+		//define name
+		String name="Suchin";
+		//adding lastname to the name
+		name.concat(" Tendulkar");
+		
+		out.println(name);
+		
+		//due to synchronization compile time is increased then efficiency of code is less
+		StringBuffer myname=new StringBuffer("mahima");
+		myname.append(" jyothi");
+		
+		out.println("my name is "+myname);
+		
+		//due to non-synchronization compile time is reduce then efficiency of code is good
+		StringBuilder sb=new StringBuilder("Hindusthan");
+		sb.append(" Computers Limited");
+		
+		out.println("is working in "+sb);
+		//create object of vector class type a
+		v=new Vector();
+		
+		v.addElement(s1);
+		v.addElement(myname);
+		out.println("Collection v:"+v);
+				
+	}
+
+}
